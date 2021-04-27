@@ -1,7 +1,6 @@
-from flask import Flask
+from basic_web_app import create_app
 
-application = Flask(__name__)
+application = create_app()
 
-@application.route('/')
-def home():
-	return '<h1>Oi Marina, tudo bem? Sdds</h1>'
+if __name__ == '__main__':
+	application.run(debug=True)
